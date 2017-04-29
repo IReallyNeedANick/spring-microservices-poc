@@ -1,11 +1,13 @@
 package app;
 
+import app.property.PropertyConfig;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
@@ -35,6 +37,7 @@ import java.util.List;
 @EnableEurekaClient
 @EnableResourceServer
 @EnableFeignClients
+@EnableConfigurationProperties(PropertyConfig.class)
 public class HelloApplication {
 
 
