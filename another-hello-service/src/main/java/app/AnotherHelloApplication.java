@@ -18,6 +18,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @SpringBootApplication
 @EnableEurekaClient
 @EnableResourceServer
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class AnotherHelloApplication {
 
 
@@ -25,17 +26,4 @@ public class AnotherHelloApplication {
 		SpringApplication.run(AnotherHelloApplication.class, args);
 	}
 
-	@Configuration
-	@EnableWebSecurity
-	@EnableGlobalMethodSecurity(prePostEnabled = true)
-	@Order(105)
-	protected static class SecurityConfig extends WebSecurityConfigurerAdapter {
-
-		@Override
-		protected void configure(HttpSecurity http) throws Exception {
-			http
-					.authorizeRequests().anyRequest().authenticated()
-			;
-		}
-	}
 }

@@ -21,7 +21,7 @@
     <parent>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>Camden.SR6</version>
+        <version>Dalston.RELEASE</version>
     </parent>
     <properties>
         <java.version>1.8</java.version>

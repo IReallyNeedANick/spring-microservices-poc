@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @FeignClient("level2-hello-service")
 public interface Level2HelloClient {
-	@RequestMapping(method = RequestMethod.GET, value = "/give-me-hello")
+	@GetMapping(value = "/give-me-hello")
 	String giveMeLevel2Hello();
 }
