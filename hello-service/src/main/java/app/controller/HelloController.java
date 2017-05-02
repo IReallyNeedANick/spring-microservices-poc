@@ -34,7 +34,7 @@ public class HelloController {
 
 	@GetMapping("call-another-hello")
 	public String callHello() {
-		return "this is first level hello that includes also second level hello: " + level2HelloClient.giveMeLevel2Hello();
+		return "this is first level hello that is calling 2 level hello: " + level2HelloClient.giveMeLevel2Hello();
 	}
 
 	@GetMapping(value = "/hello")
