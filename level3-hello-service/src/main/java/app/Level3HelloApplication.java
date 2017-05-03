@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 
 /**
  * Created by bm on 29.03.2017.
@@ -19,11 +20,19 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableEurekaClient
 @EnableResourceServer
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class AnotherHelloApplication {
+public class Level3HelloApplication {
 
 
 	public static void main(String[] args) {
-		SpringApplication.run(AnotherHelloApplication.class, args);
+		SpringApplication.run(Level3HelloApplication.class, args);
 	}
-
+	@Configuration
+	public static class HelloServiceSecurityConfiguration extends ResourceServerConfigurerAdapter {
+		@Override
+		public void configure(HttpSecurity http) throws Exception {
+			http.authorizeRequests().antMatchers("/app-management/**").permitAll();
+			http.authorizeRequests().anyRequest().authenticated()
+			;
+		}
+	}
 }

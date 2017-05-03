@@ -34,7 +34,7 @@ public class TestRun {
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.set("Authorization", "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJib3JpcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJvcmdhbml6YXRpb24iOiJBV0VTT01FIG9yZ2FuaXphdGlvbiIsImV4cCI6MzY0MDg5NTU0NCwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiI1NmU1NjE4NS0yMDNjLTRkZjgtOWIxZC0wODdhNDFjZGVkYzQiLCJjbGllbnRfaWQiOiJ0cnVzdGVkX2NsaWVudCJ9.ua7SEuQ33fK-bYi1WN_wVpE2ZFOwhuiqeLl9tpk34eolb4zCuzwuhgJEy76QaFrxnY2qX_e1OJ1jXOKxHos_YyeI19qS2ZrSv3r-FPwm9F5u_hAQis5LtxaALYCD7aQQIFRTEDcJwwlMrh2onn98ioEuzvRHeu5_1zwqeUvmPCw");
-		String url = "http://localhost:8080/hello-service/call-another-hello";
+		String url = "http://localhost:8080/hello-service/level1-hello";
 		String url1 = "http://localhost:51229/call-another-hello";
 
 		HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);

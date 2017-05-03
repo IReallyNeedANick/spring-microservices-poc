@@ -14,9 +14,11 @@
         <module>configuration</module>
         <module>authorization</module>
         <module>monitoring</module>
+        <module>turbine-stream</module>
         <module>tracing</module>
         <module>hello-service</module>
         <module>level2-hello-service</module>
+        <module>level3-hello-service</module>
     </modules>
 
     <parent>

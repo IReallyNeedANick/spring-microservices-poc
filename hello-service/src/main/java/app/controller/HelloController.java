@@ -32,9 +32,9 @@ public class HelloController {
 		return movies;
 	}
 
-	@GetMapping("call-another-hello")
+	@GetMapping("/hi5")
 	public String callHello() {
-		return "this is first level hello that is calling 2 level hello: " + level2HelloClient.giveMeLevel2Hello();
+		return "high 5 to you level2 service: " + level2HelloClient.giveMeHigh5();
 	}
 
 	@GetMapping(value = "/hello")
@@ -45,5 +45,11 @@ public class HelloController {
 	@GetMapping(value = "/property-change")
 	public String propertyChange() {
 		return "this is the value of foo.bar: " + propertyConfig.getBar();
+	}
+
+
+	@GetMapping(value = "/level1-hello")
+	public String hello2() {
+		return "level1 works. calling level2: " + level2HelloClient.hello2();
 	}
 }

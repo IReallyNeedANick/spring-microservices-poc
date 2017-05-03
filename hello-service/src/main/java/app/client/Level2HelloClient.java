@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 @FeignClient(value = "level2-hello-service", fallback = Level2HelloClientFallback.class)
 public interface Level2HelloClient {
-	@GetMapping(value = "/give-me-hello")
-	String giveMeLevel2Hello();
+	@GetMapping(value = "/give-me-high5")
+	String giveMeHigh5();
+
+	@GetMapping(value = "/level2-hello")
+	String hello2();
 }
