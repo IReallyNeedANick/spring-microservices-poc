@@ -1,0 +1,102 @@
+{
+	"variables": [],
+	"info": {
+		"name": "spring-cloud",
+		"_postman_id": "f8c84f70-99d1-eb95-3f3a-9655227651f2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/authorization-server/oauth/token?username=boris&password=marn&grant_type=password",
+			"request": {
+				"url": "localhost:8080/authorization-server/oauth/token?username=boris&password=marn&grant_type=password",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dHJ1c3RlZF9jbGllbnQ6c2VjcmV0",
+						"description": ""
+					},
+					{
+						"key": "//username",
+						"value": "boris",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "//password",
+						"value": "marn",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "//grant_type",
+						"value": "password",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/hello-service/hello",
+			"request": {
+				"url": "localhost:8080/hello-service/call-another-hello",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJib3JpcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJvcmdhbml6YXRpb24iOiJBV0VTT01FIG9yZ2FuaXphdGlvbiIsImV4cCI6MzY0MDg5NTU0NCwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiI1NmU1NjE4NS0yMDNjLTRkZjgtOWIxZC0wODdhNDFjZGVkYzQiLCJjbGllbnRfaWQiOiJ0cnVzdGVkX2NsaWVudCJ9.ua7SEuQ33fK-bYi1WN_wVpE2ZFOwhuiqeLl9tpk34eolb4zCuzwuhgJEy76QaFrxnY2qX_e1OJ1jXOKxHos_YyeI19qS2ZrSv3r-FPwm9F5u_hAQis5LtxaALYCD7aQQIFRTEDcJwwlMrh2onn98ioEuzvRHeu5_1zwqeUvmPCw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/hello-service/layered-hello",
+			"request": {
+				"url": "localhost:8080/level2-hello-service/call-another-hello",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJib3JpcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJvcmdhbml6YXRpb24iOiJBV0VTT01FIG9yZ2FuaXphdGlvbiIsImV4cCI6MzY0MDg5NTU0NCwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiI1NmU1NjE4NS0yMDNjLTRkZjgtOWIxZC0wODdhNDFjZGVkYzQiLCJjbGllbnRfaWQiOiJ0cnVzdGVkX2NsaWVudCJ9.ua7SEuQ33fK-bYi1WN_wVpE2ZFOwhuiqeLl9tpk34eolb4zCuzwuhgJEy76QaFrxnY2qX_e1OJ1jXOKxHos_YyeI19qS2ZrSv3r-FPwm9F5u_hAQis5LtxaALYCD7aQQIFRTEDcJwwlMrh2onn98ioEuzvRHeu5_1zwqeUvmPCw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/hello-service/hi5",
+			"request": {
+				"url": "localhost:8080/level2-hello-service/give-me-hello",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJib3JpcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJvcmdhbml6YXRpb24iOiJBV0VTT01FIG9yZ2FuaXphdGlvbiIsImV4cCI6MzY0MDg5NTU0NCwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiI1NmU1NjE4NS0yMDNjLTRkZjgtOWIxZC0wODdhNDFjZGVkYzQiLCJjbGllbnRfaWQiOiJ0cnVzdGVkX2NsaWVudCJ9.ua7SEuQ33fK-bYi1WN_wVpE2ZFOwhuiqeLl9tpk34eolb4zCuzwuhgJEy76QaFrxnY2qX_e1OJ1jXOKxHos_YyeI19qS2ZrSv3r-FPwm9F5u_hAQis5LtxaALYCD7aQQIFRTEDcJwwlMrh2onn98ioEuzvRHeu5_1zwqeUvmPCw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
