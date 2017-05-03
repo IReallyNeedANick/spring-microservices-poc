@@ -25,7 +25,7 @@ We use configuration-first approach. This means we must run @ConfigurationServer
 
 To get configuration for spring-application-name=HELLO_SERVICE and profile=DEVELOPMENT we only need to call URL `GET=http://localhost:9009/HELLO_SERVICE/DEVELOPMENT`
 
-Microservices must have at minimal artifact pom xml:
+Microservices must have at minimal dependency in pom.xml:
 ```
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -70,7 +70,13 @@ Services secured with @AuthorizationServer must have at minimal annotation `@Ena
  
 ##monitoring 
 
-//TODO
+you must have rabbitMQ installed with default settings.
+
+go to http://localhost:8079/hystrix
+
+write url http://localhost:8989/turbine.stream
+
+watch how requests play out.
 
 ##tracing
 
