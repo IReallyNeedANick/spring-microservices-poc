@@ -68,7 +68,7 @@ Security is stateless and OAUTH2 JWT compliant. Other services validate token by
 
 Services secured with @AuthorizationServer must have at minimal annotation `@EnableResourceServer` and link to public key (for example `security.oauth2.resource.jwt.key-uri=http://localhost:8081/oauth/token_key`)
  
-##monitoring 
+## Monitoring 
 
 you must have rabbitMQ installed with default settings.
 
