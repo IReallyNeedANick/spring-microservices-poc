@@ -9,13 +9,14 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>hello-service</module>
-        <module>level2-hello-service</module>
         <module>api-gateway</module>
         <module>auto-discovery</module>
         <module>configuration</module>
         <module>authorization</module>
         <module>monitoring</module>
+        <module>tracing</module>
+        <module>hello-service</module>
+        <module>level2-hello-service</module>
     </modules>
 
     <parent>
