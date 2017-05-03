@@ -53,7 +53,7 @@ All eureka registered services can be called for now.
 
 Security is stateless and OAUTH2 JWT compliant. Other services validate token by getting public key from @AuthorizationServer
 
-Services secured with @AuthorizationServer must have at minimal annotation `@EnableAuthoriazionServer` and link to public key (for example `security.oauth2.resource.jwt.key-uri=http://localhost:8081/oauth/token_key`)
+Services secured with @AuthorizationServer must have at minimal annotation `@EnableResourceServer` and link to public key (for example `security.oauth2.resource.jwt.key-uri=http://localhost:8081/oauth/token_key`)
  
 ##monitoring 
 
