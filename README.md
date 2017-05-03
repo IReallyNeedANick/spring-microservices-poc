@@ -25,16 +25,29 @@ We use configuration-first approach. This means we must run @ConfigurationServer
 
 To get configuration for spring-application-name=HELLO_SERVICE and profile=DEVELOPMENT we only need to call URL `GET=http://localhost:9009/HELLO_SERVICE/DEVELOPMENT`
 
-Microservices must have at minimal artifact `spring-cloud-starter-config` imported, and these two properties set in bootstrap.properties:
- - spring.application.name=${microservice-name}
- - spring.cloud.config.uri=http://localhost:9009
+Microservices must have at minimal artifact pom xml:
+```
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+```
+And these two properties set in bootstrap.properties:
+```
+spring.application.name=${microservice-name}
+spring.cloud.config.uri=http://localhost:9009
+```
 
 
 ##Eureka server
 
 To see all registered microservices call `GET=localhost:8761`. 
 
-If we want to run multiple instances of particular microservice we must uncomment `#eureka.instance.instance-id=${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}`
+If we want to run multiple instances of particular microservice we must uncomment 
+```
+eureka.instance.instance-id=${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+```
+
 This is commented because logic for handling dead microservices is by default quite complex and I didn't put much thought into it.
 If this is commented out new service will replace old one and there will be no dead microservices lingering in the background. 
 
