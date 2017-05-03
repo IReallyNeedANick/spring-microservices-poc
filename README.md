@@ -17,7 +17,7 @@ Spring cloud libraries used:
 
 //TODO add run priority (basically just say Configuration server must be first :)
  
-//TODO add postman call example
+//import `spring-cloud.postman_collection.json` into postman and try it yourself 
 
 ## Configuration server
 
