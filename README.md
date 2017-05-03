@@ -39,7 +39,7 @@ spring.cloud.config.uri=http://localhost:9009
 ```
 
 
-##Eureka server
+## Eureka server
 
 To see all registered microservices call `GET=localhost:8761`. 
 
@@ -78,6 +78,6 @@ write url http://localhost:8989/turbine.stream
 
 watch how requests play out.
 
-##tracing
+## tracing
 
 //TODO
