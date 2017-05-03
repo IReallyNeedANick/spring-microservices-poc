@@ -14,7 +14,9 @@ Spring cloud libraries used:
 ## Starting Application
 
 //TODO add picture
-//TODO add run priority (basically just say Configuration server must be first :) 
+
+//TODO add run priority (basically just say Configuration server must be first :)
+ 
 //TODO add postman call example
 
 ## Configuration server
@@ -56,5 +58,7 @@ Services secured with @AuthorizationServer must have at minimal annotation `@Ena
 ##monitoring 
 
 //TODO
+
 ##tracing
+
 //TODO
