@@ -1,5 +1,7 @@
 package app.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.security.core.Authentication;
@@ -17,8 +19,11 @@ import java.util.List;
 @RestController
 public class Level3HelloController {
 
+	private static final Logger logger = LoggerFactory
+			.getLogger(Level3HelloController.class);
 	@RequestMapping(value = "/level3-hello")
 	public String available() {
+		logger.info("level 3 hello service called");
 		return "greetings from level3!";
 	}
 

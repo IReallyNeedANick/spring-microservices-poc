@@ -2,6 +2,8 @@ package app.controller;
 
 import app.client.Level2HelloClient;
 import app.property.PropertyConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +17,8 @@ import java.util.List;
 @RestController
 public class HelloController {
 
+	private static final Logger logger = LoggerFactory
+			.getLogger(HelloController.class);
 	@Autowired
 	private Level2HelloClient level2HelloClient;
 
@@ -34,6 +38,7 @@ public class HelloController {
 
 	@GetMapping("/hi5")
 	public String callHello() {
+		logger.info("we will call hi5 service now.");
 		return "high 5 to you level2 service: " + level2HelloClient.giveMeHigh5();
 	}
 
@@ -50,6 +55,7 @@ public class HelloController {
 
 	@GetMapping(value = "/level1-hello")
 	public String hello2() {
+		logger.info("level1 log called.");
 		return "level1 works. calling level2: " + level2HelloClient.hello2();
 	}
 }
