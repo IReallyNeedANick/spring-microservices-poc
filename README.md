@@ -10,6 +10,9 @@ Spring cloud libraries used:
  - [Zuul gateway](https://github.com/Netflix/zuul/wiki/Getting-Started)
  - [Spring Authorization Server](http://docs.spring.io/spring-boot/docs/2.0.0.BUILD-SNAPSHOT/reference/htmlsingle/#boot-features-security-oauth2-authorization-server)
  - [Spring Cloud Hystrix](https://github.com/Netflix/Hystrix/wiki)
+ - [Spring Cloud Sleuth]()
+ - [Zipkin]()
+ - [Spring Boot Admin](https://github.com/codecentric/spring-boot-admin)
 
 ## Starting Application
 
@@ -81,3 +84,13 @@ watch how requests play out.
 ## tracing
 
 //TODO
+stop running nvidia service
+
+run /zipkin-web/zipkin-web.sh
+
+go to http://localhost:9412
+
+## spring boot admin
+
+go to http://localhost:8078/
+explore :=)
