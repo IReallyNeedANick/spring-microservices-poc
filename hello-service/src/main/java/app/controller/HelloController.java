@@ -5,6 +5,8 @@ import app.property.PropertyConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +30,7 @@ public class HelloController {
 	@GetMapping(value = "/ghostbusters")
 	public List<String> available() {
 
-//		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
 		List<String> movies = new ArrayList<>();
 		movies.add("Ghostbusters (1984)");

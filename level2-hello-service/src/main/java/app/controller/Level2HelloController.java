@@ -24,7 +24,9 @@ public class Level2HelloController {
 	private static final Logger logger = LoggerFactory
 			.getLogger(Level2HelloController.class);
 	@Autowired
-	HelloLevel3Client helloLevel3Client;
+	private HelloLevel3Client helloLevel3Client;
+
+
 	@RequestMapping(value = "/give-me-high5")
 	public String available() {
 		logger.info("hi5 of level 2 service got called");
