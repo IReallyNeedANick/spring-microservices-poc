@@ -25,16 +25,15 @@
     <parent>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>Dalston.SR1</version>
+        <version>Dalston.SR3</version>
     </parent>
     <properties>
         <java.version>1.8</java.version>
-        <admin.version>1.5.2</admin.version>
+        <admin.version>1.5.4</admin.version>
     </properties>
 
     <dependencies>
 
-        <!--https://github.com/spring-projects/spring-retry-->
         <dependency>
             <groupId>org.springframework.retry</groupId>
             <artifactId>spring-retry</artifactId>
@@ -45,7 +44,6 @@
         </dependency>
 
         <dependency>
-            <!-- Setup Spring Boot -->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
@@ -53,7 +51,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--this is for actuator so it is easier to see endpoints-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-hateoas</artifactId>
